@@ -1,3 +1,5 @@
+//👉 Set up "empty" reducer and initial state
+//👉 write the reducer logic for the actions
 export const initialState = {
     car: '',
     engine: false,
@@ -5,11 +7,11 @@ export const initialState = {
     sound: false,
     spoiler: false,
     price: ''
-  };
-  
-  export const titleReducer = (state = initialState, action) => {
+};
+
+export const optionsReducer = (state = initialState, action) => {
+
     return {
         ...state
     }
-  };
-  
+};
