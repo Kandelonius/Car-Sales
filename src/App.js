@@ -40,8 +40,7 @@ const App = props => {
   );
 };
 
-const mapStateToProps = state => { 
-  // console.log({ state });
+const mapStateToProps = state => {
   return {
     additionalFeatures: state.additionalFeatures,
     additionalPrice: state.additionalPrice,
