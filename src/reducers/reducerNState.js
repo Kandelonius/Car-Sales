@@ -26,14 +26,20 @@ export const optionsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 additionalPrice: state.additionalPrice += action.payload.price,
-                features: [...state.car.features, action.payload]
+                car: {
+                    ...state.car,
+                    features: [...state.car.features, action.payload]
+                }
             };
         case REMOVE_ACTION:
             console.log("in red", state, action.payload);
             return {
                 ...state,
                 additionalPrice: state.additionalPrice -= action.payload.price,
-                features: [...state.car.features, action.payload]
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(feature => feature.id !== action.payload.id)
+                }
             };
         default:
             return state;

@@ -10,8 +10,8 @@ export const addAction = feature => {
 
 export const REMOVE_ACTION = "REMOVE_ACTION";
 
-export const removeAction = () => {
-  return { type: REMOVE_ACTION };
+export const removeAction = feature => {
+  return { type: REMOVE_ACTION, payload: feature };
 };
 
 // export const TOGGLE_SOUND = "TOGGLE_SOUND";
