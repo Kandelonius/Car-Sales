@@ -2,11 +2,12 @@ import React from 'react';
 import { connect } from "react-redux";
 import { removeAction } from "./actions/optionsActions";
 
-const AddedFeature = props => {
+const AddedFeature = state => {
+  console.log('ffff', state)
   return (
     <li>
-      <button onClick={() => props.removeAction(props.feature)} className="button">X</button>
-      {props.feature.name}
+      <button onClick={() => state.removeAction(state.feature)} className="button">X</button>
+      {state.feature.name}
     </li>
   );
 };

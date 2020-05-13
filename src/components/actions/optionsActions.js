@@ -4,7 +4,8 @@
 export const ADD_ACTION = "ADD_ACTION";
 
 export const addAction = feature => {
-  return { type: ADD_ACTION, payload: feature};
+  return { type: ADD_ACTION, payload: feature
+    };
 };
 
 export const REMOVE_ACTION = "REMOVE_ACTION";

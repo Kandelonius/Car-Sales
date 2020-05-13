@@ -25,14 +25,14 @@ export const optionsReducer = (state = initialState, action) => {
             console.log("in red", state, action.payload);
             return {
                 ...state,
-                aditionalPrice: state.additionalPrice += action.payload.price,
+                additionalPrice: state.additionalPrice += action.payload.price,
                 features: [...state.car.features, action.payload]
             };
         case REMOVE_ACTION:
             console.log("in red", state, action.payload);
             return {
                 ...state,
-                aditionalPrice: state.additionalPrice -= action.payload.price,
+                additionalPrice: state.additionalPrice -= action.payload.price,
                 features: [...state.car.features, action.payload]
             };
         default:

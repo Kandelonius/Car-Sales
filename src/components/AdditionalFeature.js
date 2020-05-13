@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from "react-redux";
 import { addAction } from "./actions/optionsActions";
 
-const AdditionalFeature = props => {
+const AdditionalFeature = state => {
   // console.log("AF ", props);
   return (
     <li>
-      <button onClick={() => props.addAction(props.feature)} className="button">Add</button>
-      {props.feature.name} (+{props.feature.price})
+      <button onClick={() => state.addAction(state.feature)} className="button">Add</button>
+      {state.feature.name} (+{state.feature.price})
     </li>
   );
 };
