@@ -1,6 +1,6 @@
 //👉 Set up "empty" reducer and initial state
 //👉 write the reducer logic for the actions
-import { ADD_ACTION } from "../components/actions/optionsActions";
+import { ADD_ACTION, REMOVE_ACTION } from "../components/actions/optionsActions";
 export const initialState = {
     additionalPrice: 0,
     car: {
@@ -22,10 +22,17 @@ export const optionsReducer = (state = initialState, action) => {
     // console.log("action", action);
     switch (action.type) {
         case ADD_ACTION:
-            console.log("in red", action.payload);
+            console.log("in red", state, action.payload);
             return {
                 ...state,
-                aditionalPrice: state.additionalPrice + action.payload.price,
+                aditionalPrice: state.additionalPrice += action.payload.price,
+                features: [...state.car.features, action.payload]
+            };
+        case REMOVE_ACTION:
+            console.log("in red", state, action.payload);
+            return {
+                ...state,
+                aditionalPrice: state.additionalPrice -= action.payload.price,
                 features: [...state.car.features, action.payload]
             };
         default:

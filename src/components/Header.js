@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { removeAction } from "./actions/optionsActions";
 
 const Header = props => {
   return (
@@ -14,6 +15,7 @@ const Header = props => {
 };
 
 const mapStateToProps = state => {
+  console.log('head', state);
   return {
     car: state.car,
   }
@@ -21,5 +23,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  {removeAction}
 )(Header);

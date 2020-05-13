@@ -7,11 +7,11 @@ export const addAction = feature => {
   return { type: ADD_ACTION, payload: feature};
 };
 
-// export const TOGGLE_RACING = "TOGGLE_RACING";
+export const REMOVE_ACTION = "REMOVE_ACTION";
 
-// export const toggleRacing = () => {
-//   return { type: TOGGLE_RACING };
-// };
+export const removeAction = () => {
+  return { type: REMOVE_ACTION };
+};
 
 // export const TOGGLE_SOUND = "TOGGLE_SOUND";
 
