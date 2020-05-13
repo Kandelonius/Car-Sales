@@ -1,7 +1,7 @@
 //👉 Connect components
 import React, { useState } from "react";
 import { connect } from "react-redux";
-
+import { addAction } from "./components/actions/optionsActions";
 import Header from './components/Header';
 import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
@@ -50,5 +50,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  {}
+  {addAction}
 )(App);

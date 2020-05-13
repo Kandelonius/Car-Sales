@@ -19,12 +19,14 @@ export const initialState = {
 };
 
 export const optionsReducer = (state = initialState, action) => {
-    console.log("action", action);
+    // console.log("action", action);
     switch (action.type) {
         case ADD_ACTION:
+            console.log("in red", action.payload);
             return {
                 ...state,
-                feature: action.payload
+                aditionalPrice: state.additionalPrice + action.payload.price,
+                features: [...state.car.features, action.payload]
             };
         default:
             return state;
